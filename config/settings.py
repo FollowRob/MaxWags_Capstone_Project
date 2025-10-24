@@ -28,7 +28,7 @@ if os.path.isfile('env.py'):
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -107,6 +107,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Dictate use of custom user model
+AUTH_USER_MODEL = 'maxwags.User'
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
