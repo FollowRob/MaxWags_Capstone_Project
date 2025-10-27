@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Welcome to the MaxWags Register Template!</h1>
+{{ request.user }}
+{{ request.user.is_authenticated }}
+{% endblock %}
