@@ -3,16 +3,16 @@ from django.http import HttpResponse
 
 # Create your views here.
 def home_page_view(request):
-    return HttpResponse('<h1>Welcome to the MaxWags Home Page!</h1>')
+    return render(request, 'home.html')
 
 def register_view(request):
-    return HttpResponse('<h1>Register for an account</h1>')
+    return render(request, 'register.html')
 
 def login_view(request):
-    return HttpResponse('<h1>Login</h1>')
+    return render(request, 'login.html')
 
 def logout_view(request):
-    return HttpResponse('<h1>Logout</h1>')
+    return render(request, 'logout.html')
 
 def posts_view(request):
-    return HttpResponse('<h1>Posts</h1>')
+    return render(request, 'posts.html')
