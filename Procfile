@@ -1,1 +1,1 @@
-web: gunicorn maxwags.wsgi
+web: gunicorn config.wsgi
