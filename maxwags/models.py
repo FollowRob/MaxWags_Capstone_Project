@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
@@ -13,7 +14,7 @@ class User(AbstractUser):
 # DogPost model
 class DogPost(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='dog_posts')
-    image = models.ImageField(upload_to='dog_images/')
+    image = CloudinaryField('image', default='placeholder')
     caption = models.CharField(max_length=120, blank=True)
     date_posted = models.DateTimeField(auto_now_add=True)
 
