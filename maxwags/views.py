@@ -1,5 +1,8 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.decorators import login_required
+from .models import User, DogPost, Comment
 
 # Create your views here.
 def home_page_view(request):
@@ -15,4 +18,6 @@ def logout_view(request):
     return render(request, 'logout.html')
 
 def posts_view(request):
-    return render(request, 'posts.html')
+        posts = DogPost.objects.all().order_by('-date_posted') 
+        context = {'posts': posts}
+        return render(request, 'posts.html', context)
