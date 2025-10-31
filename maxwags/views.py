@@ -2,8 +2,9 @@ from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from .models import User, DogPost, Comment
+from .forms import DogPostForm
 
 
 # Create your views here.
@@ -67,3 +68,22 @@ def add_comment_view(request, post_id):
         else:
             messages.error(request, 'Comment cannot be empty.')
     return redirect('posts')
+
+# Check walker status
+def is_walker(user):
+    return user.is_authenticated and user.is_walker
+
+# Add Dog Post - walkers only
+@user_passes_test(is_walker, login_url='home')
+def create_dog_post_view(request):
+    if request.method == 'POST':
+        form = DogPostForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.user = request.user
+            post.save()
+            messages.success(request, 'Post created successfully.')
+            return redirect('posts')
+    else:
+        form = DogPostForm()
+    return render(request, 'create_post.html', {'form': form})
