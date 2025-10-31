@@ -1,19 +1,48 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Dog posts</h1>
+<h1>Dog Posts</h1>
+
+{% if user.is_authenticated and user.is_walker %}
+  <p><a href="{% url 'create_post' %}">Upload a new post</a></p>
+{% endif %}
 
 {% for post in posts %}
-    <div class="post">
-        <p><em>Posted by {{ post.user.username }} on {{ post.date_posted|date:"d M Y, H:i" }}</em></p>
-        <img src="{{ post.image.url }}" alt="Dog photo" width="400">
-        {% if post.caption %}
-            <p>{{ post.caption }}</p>
-        {% endif %}
-    </div>
+  <div class="post" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 20px;">
+    <p><em>Posted by {{ post.user.username }} on {{ post.date_posted|date:"d M Y, H:i" }}</em></p>
+
+    <img src="{{ post.image.url }}" alt="Dog photo" width="400">
+
+    {% if post.caption %}
+      <p>{{ post.caption }}</p>
+    {% endif %}
+
+    <hr>
+
+    <!-- Comments  -->
+    <h4>Comments</h4>
+    {% if post.comments.all %}
+      {% for comment in post.comments.all %}
+        <p><strong>{{ comment.user.username }}</strong>: {{ comment.text }}</p>
+      {% empty %}
+        <p>No comments yet.</p>
+      {% endfor %}
+    {% else %}
+      <p>No comments yet.</p>
+    {% endif %}
+
+    <!-- Comment form -->
+    {% if user.is_authenticated %}
+      <form method="post" action="{% url 'add_comment' post.id %}">
+        {% csrf_token %}
+        <input type="text" name="text" placeholder="Add a comment..." required>
+        <button type="submit">Post</button>
+      </form>
+    {% else %}
+      <p><a href="{% url 'login' %}">Log in</a> to comment.</p>
+    {% endif %}
+  </div>
 {% empty %}
-    <p>No posts just yet!</p>
-{% endfor %} 
-
-
+  <p>No posts just yet!</p>
+{% endfor %}
 {% endblock %}
