@@ -4,14 +4,14 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.decorators import login_required, user_passes_test
 from .models import User, DogPost, Comment
-from .forms import DogPostForm
+from .forms import DogPostForm, RegisterForm
 
 
 # Create your views here.
 def home_page_view(request):
     return render(request, 'home.html')
 
-# Anyone is able to register
+# Anyone able to register
 def register_view(request):
     from .forms import RegisterForm
     if request.method == 'POST':
@@ -21,7 +21,7 @@ def register_view(request):
             user.is_walker = False  # Default to False, superadmin/walkers need to assign role
             user.save()
             login(request, user)
-            messages.success(request, "Thanks for signing up!")
+            messages.success(request, "Thanks for joining the MaxWags family!")
             return redirect('posts')
     else:
         form = RegisterForm()
