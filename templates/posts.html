@@ -1,48 +1,61 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-<h1>Dog Posts</h1>
+<div class="container mt-4">
+  <h1 class="text-center mb-4 fw-bold">Pictures of your pups!</h1>
 
-{% if user.is_authenticated and user.is_walker %}
-  <p><a href="{% url 'create_post' %}">Upload a new post</a></p>
-{% endif %}
+  <div class="row g-4">
+    {% for post in posts %}
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm border-0 h-100">
+          <img src="{{ post.image.url }}" class="card-img-top" alt="Dog photo">
 
-{% for post in posts %}
-  <div class="post" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 20px;">
-    <p><em>Posted by {{ post.user.username }} on {{ post.date_posted|date:"d M Y, H:i" }}</em></p>
+          <div class="card-body d-flex flex-column">
+            <!-- Post Info -->
+            <h6 class="card-subtitle mb-2 text-muted">
+              Posted by <strong>{{ post.user.username }}</strong><br>
+              <small>{{ post.date_posted|date:"d M Y, H:i" }}</small>
+            </h6>
 
-    <img src="{{ post.image.url }}" alt="Dog photo" width="400">
 
-    {% if post.caption %}
-      <p>{{ post.caption }}</p>
-    {% endif %}
+            {% if post.caption %}
+              <p class="card-text">{{ post.caption }}</p>
+            {% endif %}
 
-    <hr>
+            <hr class="my-3">
 
-    <!-- Comments  -->
-    <h4>Comments</h4>
-    {% if post.comments.all %}
-      {% for comment in post.comments.all %}
-        <p><strong>{{ comment.user.username }}</strong>: {{ comment.text }}</p>
-      {% empty %}
-        <p>No comments yet.</p>
-      {% endfor %}
-    {% else %}
-      <p>No comments yet.</p>
-    {% endif %}
+            <!-- Comments-->
+            <div class="comments">
+              {% for comment in post.comments.all %}
+                <div class="mb-2">
+                  <strong>{{ comment.user.username }}:</strong>
+                  <span>{{ comment.text }}</span><br>
+                  <small class="text-muted">{{ comment.date_posted|date:"d M Y, H:i" }}</small>
+                </div>
+              {% empty %}
+                <p class="text-muted">No comments yet.</p>
+              {% endfor %}
+            </div>
 
-    <!-- Comment form -->
-    {% if user.is_authenticated %}
-      <form method="post" action="{% url 'add_comment' post.id %}">
-        {% csrf_token %}
-        <input type="text" name="text" placeholder="Add a comment..." required>
-        <button type="submit">Post</button>
-      </form>
-    {% else %}
-      <p><a href="{% url 'login' %}">Log in</a> to comment.</p>
-    {% endif %}
+            <!-- Comment Form (logged in only) -->
+            {% if user.is_authenticated %}
+              <form method="POST" action="{% url 'add_comment' post.id %}" class="mt-auto">
+                {% csrf_token %}
+                <div class="input-group">
+                  <input type="text" name="text" class="form-control" placeholder="Add a comment..." required>
+                  <button class="btn btn-primary" type="submit">Post</button>
+                </div>
+              </form>
+            {% else %}
+              <p class="text-muted mt-2">Log in to comment.</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% empty %}
+      <p class="text-center text-muted">No posts just yet!</p>
+    {% endfor %}
   </div>
-{% empty %}
-  <p>No posts just yet!</p>
-{% endfor %}
+</div>
 {% endblock %}

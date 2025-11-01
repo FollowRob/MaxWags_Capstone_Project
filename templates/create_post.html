@@ -1,3 +1,5 @@
+{% extends "base.html" %}
+{% block content %}
 <h2>Upload a New Dog Post</h2>
 
 {% if messages %}
@@ -13,3 +15,4 @@
 </form>
 
 <p><a href="{% url 'posts' %}">Back to posts</a></p>
+{% endblock %}
