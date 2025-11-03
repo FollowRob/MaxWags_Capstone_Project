@@ -70,6 +70,26 @@ def add_comment_view(request, post_id):
             messages.error(request, 'Comment cannot be empty.')
     return redirect('posts')
 
+# edit comments
+@login_required
+def edit_comment_view(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+
+    if request.user != comment.user:
+        messages.error(request, 'Only your own comments can be edited.')
+        return redirect('posts')
+    
+    if request.method == 'POST':
+        new_text = request.POST.get('text')
+        if new_text:
+            comment.text = new_text
+            comment.save()
+            messages.success(request, 'Comment updated successfully.')
+        else:
+            messages.error(request, 'Comment cannot be empty, please delete it instead.')
+        return redirect('posts')
+    return render(request, 'edit_comment.html', {'comment': comment})
+
 # Check walker status
 def is_walker(user):
     return user.is_authenticated and user.is_walker
