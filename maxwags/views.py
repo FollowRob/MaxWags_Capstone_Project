@@ -86,9 +86,27 @@ def edit_comment_view(request, comment_id):
             comment.save()
             messages.success(request, 'Comment updated successfully.')
         else:
-            messages.error(request, 'Comment cannot be empty, please delete it instead.')
+            messages.error(
+                request,
+                'Comment cannot be empty, please delete it instead.'
+            )
         return redirect('posts')
     return render(request, 'edit_comment.html', {'comment': comment})
+
+# Delete comments
+@login_required
+def delete_comment_view(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+
+    if request.user != comment.user:
+        messages.error(request, 'Only your own comments can be deleted.')
+        return redirect('posts')
+
+    if request.method == 'POST':
+        comment.delete()
+        messages.success(request, "Comment deleted successfully.")
+        return redirect('posts')
+    return render(request, 'delete_comment.html', {'comment': comment})
 
 # Check walker status
 def is_walker(user):
