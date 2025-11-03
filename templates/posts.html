@@ -25,18 +25,27 @@
 
             <hr class="my-3">
 
-            <!-- Comments-->
+            <!-- Comments -->
             <div class="comments">
               {% for comment in post.comments.all %}
-                <div class="mb-2">
-                  <strong>{{ comment.user.username }}:</strong>
-                  <span>{{ comment.text }}</span><br>
-                  <small class="text-muted">{{ comment.date_posted|date:"d M Y, H:i" }}</small>
+                <div class="border rounded p-2 mb-2">
+                  <p class="mb-1">
+                    <strong>{{ comment.user.username }}</strong>: {{ comment.text }}
+                  </p>
+                  <small class="text-muted d-block mb-2">{{ comment.date_posted|date:"d M Y, H:i" }}</small>
+            
+                  {% if comment.user == user %}
+                    <div>
+                      <a href="{% url 'edit_comment' comment.id %}" class="btn btn-sm btn-outline-primary me-1">Edit</a>
+                      <a href="{% url 'delete_comment' comment.id %}" class="btn btn-sm btn-outline-danger">Delete</a>
+                    </div>
+                  {% endif %}
                 </div>
               {% empty %}
                 <p class="text-muted">No comments yet.</p>
               {% endfor %}
             </div>
+            
 
             <!-- Comment Form (logged in only) -->
             {% if user.is_authenticated %}
