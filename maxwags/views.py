@@ -13,16 +13,17 @@ def home_page_view(request):
 
 # Anyone able to register
 def register_view(request):
-    from .forms import RegisterForm
     if request.method == 'POST':
         form = RegisterForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
-            user.is_walker = False  # Default to False, superadmin/walkers need to assign role
+            user.is_walker = False  # Default to False, superadmin assign role
             user.save()
             login(request, user)
             messages.success(request, "Thanks for joining the MaxWags family!")
             return redirect('posts')
+        else:
+            messages.error(request, 'Please correct the errors')
     else:
         form = RegisterForm()
     return render(request, 'register.html', {'form': form})
