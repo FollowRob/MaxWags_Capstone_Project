@@ -2,72 +2,97 @@
 {% load static %}
 
 {% block content %}
-<div class="container text-center mt-5">
-  <!-- Hero -->
-  <div class="py-5">
-    <h1 class="display-4 fw-bold text-primary">Welcome to MaxWags!</h1>
-    <p class="lead text-muted mt-3">
-      A community for dog lovers and walkers. We'll share photos of your pups so you can comment,
-       and connect with other MaxWags family members! <br>
-       MaxWags was founded by Max, a lifelong dog lover who wanted to give every pup the chance to run, play, and make friends in a safe, open space.
-    </p>
 
-    {% if user.is_authenticated %}
-      <a href="{% url 'posts' %}" class="btn btn-primary btn-lg mt-3">
-        View Posts
-      </a>
-    {% else %}
-      <a href="{% url 'register' %}" class="btn btn-primary btn-lg mt-3 me-2">
-        Join the Pack
-      </a>
-      <a href="{% url 'login' %}" class="btn btn-outline-primary btn-lg mt-3">
-        Log In
-      </a>
-    {% endif %}
-  </div>
+<div class="container-fluid text-center mt-5">
+  <div class="mx-auto" style="width: 75vw; max-width: 1600px;">
+    
+    <!-- Hero -->
+    <div class="px-4 pt-5 my-5 text-center border-bottom">
+      <h1 class="display-4 fw-bold">Welcome to MaxWags</h1>
+      <div class="mx-auto" style="max-width: 800px;">
+        <p class="lead text-muted mt-3">
+          A community for dog lovers and walkers. We'll share photos of your pups so you can comment
+          and connect with other MaxWags family members! <br><br>
+          MaxWags was founded by Max, a lifelong dog lover who wanted to give every pup the chance to run,
+          play, and make friends in a safe, open space.
+        </p>
 
-  <section>
-    <p class="lead text-muted mt-3">
-        Our team collects your dogs directly from your door, takes them to our private countryside field for several hours of supervised playtime, then brings them back home happy, tired, and tail-wagging!
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+          {% if user.is_authenticated %}
+            <a href="{% url 'posts' %}" class="btn btn-primary btn-lg mt-3">View Posts</a>
+          {% else %}
+            <a href="{% url 'register' %}" class="btn btn-primary btn-lg mt-3 me-2">Join the Pack</a>
+            <a href="{% url 'login' %}" class="btn btn-outline-primary btn-lg mt-3">Log In</a>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="overflow-hidden mt-4" style="max-height: 45vh;">
+        <img src="{% static 'images/banner.webp' %}"
+             class="img-fluid border rounded-3 shadow-lg mb-4"
+             alt="Happy dogs playing in a field"
+             style="width: 100%; height: auto; object-fit: cover;">
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="px-4 pt-5 my-5 text-center">
+      <div class="mx-auto" style="max-width: 900px;">
+        <h1>What we do</h1>
+        <p class="lead text-muted mt-3">
+          Our team collects your dogs directly from your door, takes them to our private countryside field
+          for several hours of supervised playtime, then brings them back home happy, tired, and tail-wagging!
         </p>
         <p class="lead text-muted mt-3">
-            This website is both our company hub and a community space for owners. Here, you can:<br>
-            See photos from your dog’s play days<br>
-            Comment and connect with other owners<br>
-            Learn more about our walkers and what we do
+          This website is both our company hub and a community space for owners. 
+          <br>Here, you can:<br>
+          See photos from your dog’s play days<br>
+          Comment and connect with other owners<br>
+          Learn more about our walkers and what we do
         </p>
-        <p class="lead text-muted mt-3">At MaxWags, we’re more than just a walking service, we’re a pack!</p>
+        <p class="lead text-muted mt-3">
+          At MaxWags, we’re more than just a walking service; we’re a pack!
+        </p>
         <hr>
-  </section>
+      </div>
+    </section>
 
-  <!-- Featured Section -->
-  <div class="row mt-5">
-    <div class="col-md-4 mb-4">
-      <div class="card border-0 shadow-sm h-100">
-        <div class="card-body">
-          <h5 class="card-title text-primary">See our Pupdates</h5>
-          <p class="card-text text-muted">Browse adorable photos of your fur babies shared by our walkers.</p>
+    <!-- Featured cards -->
+    <div class="row mt-5 g-4 justify-content-center">
+      <div class="col-md-4 col-lg-3">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title text-primary">See our Pupdates</h5>
+            <p class="card-text text-muted">
+              Browse adorable photos of your fur babies shared by our walkers.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-md-4 mb-4">
-      <div class="card border-0 shadow-sm h-100">
-        <div class="card-body">
-          <h5 class="card-title text-primary">Comment & Connect</h5>
-          <p class="card-text text-muted">Engage with the community by leaving comments on posts.</p>
+      <div class="col-md-4 col-lg-3">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Comment & Connect</h5>
+            <p class="card-text text-muted">
+              Engage with the community by leaving comments on posts.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-md-4 mb-4">
-      <div class="card border-0 shadow-sm h-100">
-        <div class="card-body">
-          <h5 class="card-title text-primary">Walker Uploads</h5>
-          <p class="card-text text-muted">Our walkers can share their latest adventures with their furry friends.</p>
+      <div class="col-md-4 col-lg-3">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Walker Uploads</h5>
+            <p class="card-text text-muted">
+              Our walkers can share their latest adventures with their furry friends.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
 </div>
 {% endblock %}
