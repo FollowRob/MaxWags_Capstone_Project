@@ -1,3 +1,41 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Delius&display=swap');
+
 body {
-    background-color: #f0efeb;
+    font-family: 'Delius', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
   }
+
+  /* Headings and titles */
+  h1, h2, h3, h4, h5, h6,
+  .card-title {
+    font-family: 'Bangers', cursive;
+    color: #0d6efd;
+  }
+  
+  /* Navbar text white */
+  .navbar-brand {
+    font-family: 'Bangers', cursive;
+    color: #fff !important;
+  }
+
+/* Add branding to buttons */
+.btn-primary {
+  font-family: 'Bangers', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+}
+
+/* Keep at bottom to override std login button */
+.btn, 
+.nav-link, 
+.navbar-text {
+  font-family: 'Bangers', cursive !important;
+  letter-spacing: 0.5px;
+}

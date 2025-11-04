@@ -1,3 +1,30 @@
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Delius&display=swap');
+
 body {
-    background-color: #f0efeb;
+    font-family: 'Delius', sans-serif;
+    background-color: #f8f9fa; /* optional: light grey background */
+    color: #333;
+    line-height: 1.6;
   }
+
+/* Headings and brand elements */
+h1, h2, h3, h4, h5, h6,
+.navbar-brand,
+.card-title {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+  color: #0d6efd; /* Bootstrap primary blue */
+}
+
+/* Buttons for a consistent brand feel */
+.btn-primary {
+  font-family: 'Bangers', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Optional: give the navbar a slightly larger brand title */
+.navbar-brand {
+  font-size: 1.8rem;
+}
