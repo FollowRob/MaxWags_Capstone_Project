@@ -32,7 +32,19 @@ body {
   font-size: 1.8rem;
 }
 
-/* Keep at bottom to override std login button */
+/* Force navbar text and links to stay white */
+.navbar,
+.navbar a,
+.navbar .navbar-text {
+  color: #f8f9fa !important;
+}
+
+.navbar a:hover,
+.navbar .nav-link.active {
+  color: #f8f9fa !important;
+}
+
+/* Override std login button */
 .btn, 
 .nav-link, 
 .navbar-text {
