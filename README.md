@@ -59,3 +59,28 @@ This can be satisfied with the registration form and the post upload form
 ## LO4
 
 ### 4.1
+- Add table 1 - User stories and outcomes
+- Add images for all of these
+### 4.2
+Not applicable - no custom JavaScript added for project.
+### 4.3
+- Add table 2 - Responsibility testing size - screenshot pass/fail
+- Add table 3 - browser testing - chome, brave, safari
+- Add images for all of these
+
+## LO5
+
+### 5.1
+Satisfied with GitHub repository
+### 5.2
+Satisfied with GitHub repository
+
+## LO6
+
+### 6.1
+- Add link toHeroku deployed project
+- Add images where applicable
+### 6.2
+- Add complete deployment instructions
+### 6.3
+Satisfied by in settings.py
