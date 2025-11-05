@@ -8,7 +8,9 @@
 [LO6](#lo6) Deploy a Full-Stack web app using a cloud based platform ensuring security
 [LO7](#lo7) Demonstrate object-based concepts by implementing a custom model
 [LO8](#lo8) Leverage AI tools to orchestrate the software development process
+
 ## LO1
+
 ### 1.1
 - Image of the design mockups 
 - Image of the wireframe
@@ -24,7 +26,9 @@
 This can only be satisfied by looking at the code
 ### 1.5
 - Referenced in the README as a whole and specifically section 1.1
+
 ## LO2
+
 ### 2.1
 This can only be satisfied by looking at the code
 ### 2.2
@@ -40,5 +44,18 @@ Changes are fed to the user with real-time messages within the application
 This can be satisfied with the registration form and the post upload form
 - upload images of each form with feedback messages
 
+## LO3
 
+### 3.1
+- mention that there are 3 roles, user, staff and superadmin
+- add image of the login pages and the django admin login page
+### 3.2
+- add image of the top right in the navbar of the username logged in
+- add image of the top right nav bar with the login option
+### 3.3
+- add image of admin panel not allowing a user to access
+- sidebyside images of the upload button not being available for users but available for walkers
 
+## LO4
+
+### 4.1
