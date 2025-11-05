@@ -1,14 +1,14 @@
 # MaxWags_Capstone_Project
 ### To skip the criterion sections, please use the links below
 ##### Criterion
-[LO1](#lo1) Using Agile to plan/design a Full-Stack app with Django
-[LO2](#lo2) Develop & implement a data model to query & manipulate data
-[LO3](#lo3) Implement authorisation, authentication & permissions
-[LO4](#lo4) Design, create, execute Full-Stack/Django testing
-[LO5](#lo5) Utilise GitHub & hosting services safely
-[LO6](#lo6) Deploy a Full-Stack web app using a cloud based platform ensuring security
-[LO7](#lo7) Demonstrate object-based concepts by implementing a custom model
-[LO8](#lo8) Leverage AI tools to orchestrate the software development process
+- [LO1](#lo1) Using Agile to plan/design a Full-Stack app with Django
+- [LO2](#lo2) Develop & implement a data model to query & manipulate data
+- [LO3](#lo3) Implement authorisation, authentication & permissions
+- [LO4](#lo4) Design, create, execute Full-Stack/Django testing
+- [LO5](#lo5) Utilise GitHub & hosting services safely
+- [LO6](#lo6) Deploy the web app using a cloud based platform ensuring security
+- [LO7](#lo7) Demonstrate object-based concepts by implementing a custom model
+- [LO8](#lo8) Leverage AI tools to orchestrate the software development process
 
 ## LO1
 #### Using Agile to plan/design a Full-Stack app with Django
