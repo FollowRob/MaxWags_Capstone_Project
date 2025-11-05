@@ -84,3 +84,16 @@ Satisfied with GitHub repository
 - Add complete deployment instructions
 ### 6.3
 Satisfied by in settings.py
+
+## LO7
+
+### 7.1
+- add code snippet of custom model
+
+## LO8
+
+### 8.1
+### 8.2
+### 8.3
+### 8.4
+### 8.5
