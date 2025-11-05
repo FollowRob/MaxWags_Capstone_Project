@@ -1,5 +1,6 @@
 # MaxWags_Capstone_Project
-### To skip the Criterion sections, please use the links below
+### To skip the criterion sections, please use the links below
+##### Criterion
 [LO1](#lo1) Using Agile to plan/design a Full-Stack app with Django
 [LO2](#lo2) Develop & implement a data model to query & manipulate data
 [LO3](#lo3) Implement authorisation, authentication & permissions
@@ -10,6 +11,7 @@
 [LO8](#lo8) Leverage AI tools to orchestrate the software development process
 
 ## LO1
+#### Using Agile to plan/design a Full-Stack app with Django
 
 ### 1.1
 - Image of the design mockups 
@@ -27,6 +29,7 @@ This can only be satisfied by looking at the code
 ### 1.5
 - Referenced in the README as a whole and specifically section 1.1
 
+[Back to links](#criterion)
 ## LO2
 
 ### 2.1
@@ -44,6 +47,7 @@ Changes are fed to the user with real-time messages within the application
 This can be satisfied with the registration form and the post upload form
 - upload images of each form with feedback messages
 
+[Back to links](#criterion)
 ## LO3
 
 ### 3.1
@@ -56,6 +60,7 @@ This can be satisfied with the registration form and the post upload form
 - add image of admin panel not allowing a user to access
 - sidebyside images of the upload button not being available for users but available for walkers
 
+[Back to links](#criterion)
 ## LO4
 
 ### 4.1
@@ -68,6 +73,7 @@ Not applicable - no custom JavaScript added for project.
 - Add table 3 - browser testing - chome, brave, safari
 - Add images for all of these
 
+[Back to links](#criterion)
 ## LO5
 
 ### 5.1
@@ -75,6 +81,7 @@ Satisfied with GitHub repository
 ### 5.2
 Satisfied with GitHub repository
 
+[Back to links](#criterion)
 ## LO6
 
 ### 6.1
@@ -83,13 +90,15 @@ Satisfied with GitHub repository
 ### 6.2
 - Add complete deployment instructions
 ### 6.3
-Satisfied by in settings.py
+Satisfied by in settings
 
+[Back to links](#criterion)
 ## LO7
 
 ### 7.1
 - add code snippet of custom model
 
+[Back to links](#criterion)
 ## LO8
 
 ### 8.1
@@ -97,3 +106,5 @@ Satisfied by in settings.py
 ### 8.3
 ### 8.4
 ### 8.5
+[Back to links](#criterion)
+[Back to top](#maxwags_capstone_project)
