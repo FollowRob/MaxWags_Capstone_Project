@@ -168,8 +168,14 @@ Changes are fed to the user with real-time messages within the application, on t
 ___
 ### 2.4
 ##### Forms and Validation
-This can be satisfied with the registration form and the post upload form
-- upload images of each form with feedback messages
+Max wags contains a form with validation for potential users to be able to register for an account.
+They can still view posts and comments without an accounts but an account is needed to comment. 
+
+| Operation | Description | Evidence |
+|------------|--------------|-----------|
+| Registration | Password validation | <img src="/maxwags/static/images/readme/password-validation.webp" style="width:350px;height:400px"> |
+| Registration | Passwords not matching | <img src="/maxwags/static/images/readme/password-validation2.webp" style="width:350px;height:400px"> |
+| Registration | Email validation | <img src="/maxwags/static/images/readme/email-validation.webp" style="width:350px;height:400px"> |
 
 [Back to links](#criterion)
 ___
