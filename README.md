@@ -41,17 +41,42 @@ class DogPost(models.Model):
 ```
 ___
 ### 1.3 
-The project was managed with AGILE in mind utilising a projectboard and user stories. The public project baord can be found here: https://github.com/users/FollowRob/projects/10
+The project was managed with AGILE in mind utilising a projectboard and user stories. The public project board can be found here: https://github.com/users/FollowRob/projects/10
 
 <img src="/maxwags/static/images/readme/project-board.webp" alt="drawing" style="width:700px;"/>
 
 ___
 ### 1.4
-- Link to PEP8 guidelines
-This can only be satisfied by looking at the code
+Code quality can be assessed within the files within the repo however an example of custom Python logic with compound statements (from views.py) has been included below for brevity:
+
+```
+@login_required
+def add_comment_view(request, post_id):
+    post = get_object_or_404(DogPost, id=post_id)
+
+    if request.method == 'POST':
+        text = request.POST.get('text')
+        if text:
+            Comment.objects.create(
+                post=post,
+                user=request.user,
+                text=text,
+            )
+            messages.success(request, 'Comment added successfully.')
+        else:
+            messages.error(request, 'Comment cannot be empty.')
+    return redirect('posts')
+```
+PEP8 standards were adhered to utilising the guidelines captured in the link below:
+[Link to PEP8 guidelines](https://peps.python.org/pep-0008/)
 ___
 ### 1.5
-- Referenced in the README as a whole and specifically section 1.1
+Initially my design philosophy was that the website would be tailed to everyone however that also just means it's specific to nobody so instead I went for a minimalistic design with similar design elements as Facebook, initially using a similar blue for the navbar with white text over the top. The idea here was that it would be minimal and easy for the elderly (high potential as clients) to use and navigate and that the similar colouring to facebook would be familiar and comfortable to a younger generation. 
+However due to WAVE requirements the colour scheme had to be changed away from the "Facebook blue" to accomodate colourblind users and instead a relaxing green was chosen.
+
+A UX design wireframe can be found in section: [LO1.1](#lo1) and a ERD for the Python logic can be found below:
+<img src="/maxwags/static/images/readme/ERD.webp" alt="drawing" style="width:400px;"/>
+
 
 [Back to links](#criterion)
 ___
