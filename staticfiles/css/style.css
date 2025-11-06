@@ -1,53 +1,107 @@
-/* Google Fonts */
+/* Google font */
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Delius&display=swap');
 
+/* COLOR VARIABLES */
+:root {
+  --bs-primary: #1B5E20;
+  --bs-primary-rgb: 27, 94, 32;
+  --bs-primary-dark: #145A14;
+  --bs-text-light: #ffffff;
+  --bs-text-muted: #e6ffe6;
+}
+
+/* Base styles */
 body {
-    font-family: 'Delius', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    line-height: 1.6;
-  }
+  font-family: 'Delius', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
 
-  /* Headings and titles */
-  h1, h2, h3, h4, h5, h6,
-  .card-title {
-    font-family: 'Bangers', cursive;
-    color: #0d6efd;
-  }
-  
-  /* Navbar text white */
-  .navbar-brand {
-    font-family: 'Bangers', cursive;
-    color: #fff !important;
-  }
+a {
+  color: var(--bs-primary);
+  text-decoration: none;
+}
 
-/* Add branding to buttons */
+a:hover {
+  color: var(--bs-primary-dark);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6,
+.card-title {
+  font-family: 'Bangers', cursive;
+  color: var(--bs-primary);
+}
+
+.card-title {
+  color: var(--bs-primary) !important;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--bs-primary) !important;
+}
+
+.navbar-brand {
+  font-family: 'Bangers', cursive;
+  font-size: 1.8rem;
+  color: var(--bs-text-light) !important;
+}
+
+.navbar,
+.navbar a,
+.navbar .navbar-text {
+  color: var(--bs-text-light) !important;
+}
+
+.navbar a:hover,
+.navbar .nav-link.active {
+  color: #d9ffd9 !important;
+}
+
+/* Buttons */
 .btn-primary {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: var(--bs-text-light) !important;
   font-family: 'Bangers', cursive;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
-.navbar-brand {
-  font-size: 1.8rem;
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--bs-primary-dark) !important;
+  border-color: var(--bs-primary-dark) !important;
+  color: var(--bs-text-light) !important;
 }
 
-/* Force navbar text and links to stay white */
-.navbar,
-.navbar a,
-.navbar .navbar-text {
-  color: #f8f9fa !important;
-}
-
-.navbar a:hover,
-.navbar .nav-link.active {
-  color: #f8f9fa !important;
-}
-
-/* Override std login button */
-.btn, 
-.nav-link, 
-.navbar-text {
-  font-family: 'Bangers', cursive !important;
+.btn-outline-primary {
+  color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  font-family: 'Bangers', cursive;
+  text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--bs-primary) !important;
+  color: var(--bs-text-light) !important;
+}
+
+/* Footer */
+footer.footer {
+  background-color: var(--bs-primary-dark) !important;
+  color: var(--bs-text-light) !important;
+  padding: 2rem 0;
+}
+
+footer.footer a,
+footer.footer p {
+  color: var(--bs-text-muted) !important;
+}
+
+footer.footer a:hover {
+  color: var(--bs-text-light) !important;
 }
