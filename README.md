@@ -1,4 +1,4 @@
-# MaxWags_Capstone_Project
+# MaxWags Pet Walking Service by Rob Smith
 ___
 ### To skip the criterion sections, please use the links below
 ##### Criterion
