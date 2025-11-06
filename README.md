@@ -170,12 +170,16 @@ ___
 ##### Forms and Validation
 Max wags contains a form with validation for potential users to be able to register for an account.
 They can still view posts and comments without an accounts but an account is needed to comment. 
+Maxwags also contains a form to allow staff to upload posts - this page is not available to non-staff users and defaults back to the homepage.
 
 | Operation | Description | Evidence |
 |------------|--------------|-----------|
 | Registration | Password validation | <img src="/maxwags/static/images/readme/password-validation.webp" style="width:350px;height:400px"> |
 | Registration | Passwords not matching | <img src="/maxwags/static/images/readme/password-validation2.webp" style="width:350px;height:400px"> |
 | Registration | Email validation | <img src="/maxwags/static/images/readme/email-validation.webp" style="width:350px;height:400px"> |
+| Post creation | View logged in as staff | <img src="/maxwags/static/images/readme/staff-navbar.webp" > |
+| Post creation | View logged in as non-staff | <img src="/maxwags/static/images/readme/nonstaff-navbar.webp"> |
+| Post creation | Upload DogPost form | <img src="/maxwags/static/images/readme/post-form.webp" style="width:325px;height:300px"> |
 
 [Back to links](#criterion)
 ___
