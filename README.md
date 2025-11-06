@@ -17,6 +17,7 @@ ___
 #### Using Agile to plan/design a Full-Stack app with Django
 
 ### 1.1
+##### Front-End Design
 
 Initially there were 4 contrast errors, due to using roughly similar colours to Facebook (blue under white text), this caused an issue for colourblind users so a new colour scheme of green under white text was chosen.
 
@@ -27,6 +28,7 @@ Initially there were 4 contrast errors, due to using roughly similar colours to 
 ___
 
 ### 1.2
+##### Database
 
 A Postgres Database linked to Django to allow the management of data records with at least one custom model (included in the code snippet below).
 ```
@@ -40,13 +42,16 @@ class DogPost(models.Model):
         return f"{self.user.username}'s post on {self.date_posted.strftime('%d-%m-%Y %H:%M:%S')}"
 ```
 ___
+
 ### 1.3 
+##### Agile Methodology
 The project was managed with AGILE in mind utilising a projectboard and user stories. The public project board can be found here: https://github.com/users/FollowRob/projects/10
 
 <img src="/maxwags/static/images/readme/project-board.webp" alt="drawing" style="width:700px;"/>
 
 ___
 ### 1.4
+##### Code Quality
 Code quality can be assessed within the files within the repo however an example of custom Python logic with compound statements (from views.py) has been included below for brevity:
 
 ```
@@ -71,6 +76,7 @@ PEP8 standards were adhered to utilising the guidelines captured in the link bel
 [Link to PEP8 guidelines](https://peps.python.org/pep-0008/)
 ___
 ### 1.5
+##### Documentation
 Initially my design philosophy was that the website would be tailed to everyone however that also just means it's specific to nobody so instead I went for a minimalistic design with similar design elements as Facebook, initially using a similar blue for the navbar with white text over the top. The idea here was that it would be minimal and easy for the elderly (high potential as clients) to use and navigate and that the similar colouring to facebook would be familiar and comfortable to a younger generation. 
 However due to WAVE requirements the colour scheme had to be changed away from the "Facebook blue" to accomodate colourblind users and instead a relaxing green was chosen.
 
@@ -83,6 +89,7 @@ ___
 ## LO2
 
 ### 2.1
+##### Database Development
 The MaxWags app uses a relational database powered by PostgreSQL (via Django ORM).  
 The schema includes three main models: `User`, `DogPost`, and `Comment`.
 
@@ -111,6 +118,7 @@ python manage.py makemigrations
 python manage.py migrate
 ___
 ### 2.2
+##### CRUD Functionality
 CRUD functionality fulfilled within the comments section, logged in users can:
 - Create a comment on a post
 - Read comments they/others have left
@@ -118,10 +126,12 @@ CRUD functionality fulfilled within the comments section, logged in users can:
 - Delete their own comments only
 ___
 ### 2.3
+##### User Notifications
 Changes are fed to the user with real-time messages within the application
 - Add images of these feedback messages
 ___
 ### 2.4
+##### Forms and Validation
 This can be satisfied with the registration form and the post upload form
 - upload images of each form with feedback messages
 
@@ -130,14 +140,17 @@ ___
 ## LO3
 
 ### 3.1
+##### Role-Based Login and Registration
 - mention that there are 3 roles, user, staff and superadmin
 - add image of the login pages and the django admin login page
 ___
 ### 3.2
+##### Reflect Login State
 - add image of the top right in the navbar of the username logged in
 - add image of the top right nav bar with the login option
 ___
 ### 3.3
+##### Access Control
 - add image of admin panel not allowing a user to access
 - sidebyside images of the upload button not being available for users but available for walkers
 
@@ -146,13 +159,16 @@ ___
 ## LO4
 
 ### 4.1
+##### Python Test Procedures
 - Add table 1 - User stories and outcomes
 - Add images for all of these
 ___
 ### 4.2
+##### JavaScript Test Procedures (if applicable)
 Not applicable - no custom JavaScript added for project.
 ___
 ### 4.3
+##### Testing Documentation
 - Add table 2 - Responsibility testing size - screenshot pass/fail
 - Add table 3 - browser testing - chome, brave, safari
 - Add images for all of these
@@ -162,9 +178,11 @@ ___
 ## LO5
 
 ### 5.1
+##### Version Control with Git and GitHub
 Satisfied with GitHub repository
 ___
 ### 5.2
+##### Secure Code Management
 Satisfied with GitHub repository
 
 [Back to links](#criterion)
@@ -172,10 +190,12 @@ ___
 ## LO6
 
 ### 6.1
+##### Deploy Application to Cloud Platform
 - Add link toHeroku deployed project
 - Add images where applicable
 ___
 ### 6.2
+##### Document Deployment Process
 The site was deployed on Heroku and connected to GitHub for version control. This was done by following the below steps:
 
 - Log in to GitHub and create a new repository
@@ -190,6 +210,7 @@ The site was deployed on Heroku and connected to GitHub for version control. Thi
 - Once deployed, the site is accessible through the live link provided at the top of the document.
 ___
 ### 6.3
+##### Ensure Security in Deployment
 Satisfied by in settings
 
 [Back to links](#criterion)
@@ -197,6 +218,7 @@ ___
 ## LO7
 
 ### 7.1
+##### Design and Implement a Custom Data Model
 - add code snippet of custom model
 
 [Back to links](#criterion)
@@ -204,13 +226,18 @@ ___
 ## LO8
 
 ### 8.1
+##### Use AI tools to assist in code creation
 ___
 ### 8.2
+##### Use AI tools to assist in debugging code
 ___
 ### 8.3
+##### Use AI tools to optimise code for performance and user experience
 ___
 ### 8.4
+##### Use AI tools to create automated unit tests
 ___
 ### 8.5
+##### Reflect on AI's role in the development process and it's impact on workflow
 [Back to links](#criterion)
 [Back to top](#maxwags_capstone_project)
