@@ -212,8 +212,11 @@ ___
 ___
 ### 3.3
 ##### Access Control
-- add image of admin panel not allowing a user to access
-- sidebyside images of the upload button not being available for users but available for walkers
+| Description | Evidence |
+--------------|-----------|
+| Non-registered users are unable to access the commands to comment on posts | <img src="/maxwags/static/images/readme/login-comment.webp"> |
+| Users without is_walker permissions are unable to access the page to upload posts | <img src="/maxwags/static/images/readme/nonstaff-navbar.webp"> |
+| Users without admin perms are unable to access the admin panel and are prompted to login with an admin account | <img src="/maxwags/static/images/readme/user-admin.webp"> |
 
 [Back to links](#criterion)
 ___
