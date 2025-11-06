@@ -19,6 +19,14 @@ urlpatterns = [
     path('posts/', posts_view, name='posts'),
     path('posts/<int:post_id>/comment/', add_comment_view, name='add_comment'),
     path('upload/', create_dog_post_view, name='create_post'),
-    path('comments/<int:comment_id>/edit/', edit_comment_view, name='edit_comment'),
-    path('comments/<int:comment_id>/delete/', delete_comment_view, name='delete_comment'),
+    path(
+        'comments/<int:comment_id>/edit/',
+        edit_comment_view,
+        name='edit_comment'
+    ),
+    path(
+        'comments/<int:comment_id>/delete/',
+        delete_comment_view,
+        name='delete_comment'
+    ),
 ]
