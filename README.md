@@ -119,16 +119,52 @@ python manage.py migrate
 ___
 ### 2.2
 ##### CRUD Functionality
-CRUD functionality fulfilled within the comments section, logged in users can:
-- Create a comment on a post
-- Read comments they/others have left
-- Edit their own comments only
-- Delete their own comments only
+The Comments model provides any registered user with full CRUD functionality on any posts.
+Logged in users can create, view, edit and delete comments on staff posts.
+Users can only edit or delete their own comments.
+###### Model
+```
+class Comment(models.Model):
+    post = models.ForeignKey(DogPost, on_delete=models.CASCADE, related_name='comments')
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    text = models.TextField()
+    date_posted = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Comment by {self.user.username} on {self.post.id}"
+```
+###### View
+```
+@login_required
+def add_comment(request, post_id):
+    post = get_object_or_404(DogPost, id=post_id)
+    if request.method == 'POST':
+        text = request.POST.get('text')
+        if text:
+            Comment.objects.create(post=post, user=request.user, text=text)
+            messages.success(request, "Comment added successfully!")
+    return redirect('posts')
+```
+
+| Operation | Description | Evidence |
+|------------|--------------|-----------|
+| Create | Users can submit a comment form under each post. | !<img src="/maxwags/static/images/readme/create-crud.webp"> |
+| Read | Comments display below each post with username and date. | <img src="/maxwags/static/images/readme/read-crud.webp"> |
+| Update | Comment authors can edit their own text. | <img src="/maxwags/static/images/readme/update-crud.webp"> |
+| Delete | Comment authors can delete their own comments. | <img src="/maxwags/static/images/readme/delete-crud.webp">
+ |
 ___
 ### 2.3
 ##### User Notifications
-Changes are fed to the user with real-time messages within the application
-- Add images of these feedback messages
+| Operation | Description | Evidence |
+|------------|--------------|-----------|
+| DogPost | Post created message | <img src="/maxwags/static/images/readme/post-create-message.webp"> |
+| Logout | Logout message | <img src="/maxwags/static/images/readme/logout-message.webp"> |
+| Comment | Comment deleted message | <img src="/maxwags/static/images/readme/comment-delete-message.webp"> |
+| Comment | Comment updated message | <img src="/maxwags/static/images/readme/comment-update-message.webp">|
+| Comment | Comment added message | <img src="/maxwags/static/images/readme/comment-add-message.webp"> |
+
+Changes are fed to the user with real-time messages within the application, on the page that the change occurs on.
 ___
 ### 2.4
 ##### Forms and Validation
