@@ -11,21 +11,40 @@ ___
 - [LO7](#lo7) Demonstrate object-based concepts by implementing a custom model
 - [LO8](#lo8) Leverage AI tools to orchestrate the software development process
 ___
+![MAxWags device responsiveness screenshot](/maxwags/static/images/readme/devices-mockup.webp)
+
 ## LO1
 #### Using Agile to plan/design a Full-Stack app with Django
 
 ### 1.1
-- Image of the design mockups 
-- Image of the wireframe
-- Image of WAVE test
-- Justification of the 4 contrast errors, mention that the opacity was increased to rectify
+
+Initially there were 4 contrast errors, due to using roughly similar colours to Facebook (blue under white text), this caused an issue for colourblind users so a new colour scheme of green under white text was chosen.
+
+<img src="/maxwags/static/images/readme/devices-mockup.webp" alt="responsiveness" style="width:100; height:300px"/>
+<img src="/maxwags/static/images/readme/wireframe.webp" alt="wireframe" style="width:100; height:300px;"/>
+<img src="/maxwags/static/images/readme/Wave-home.webp" alt="wireframe" style="width:100; height:300px;"/>
+<img src="/maxwags/static/images/readme/Wave-posts.webp" alt="wireframe" style="width:100; height:300px;"/>
 ___
+
 ### 1.2
-- Add image/code snippet of the custom model
+
+A Postgres Database linked to Django to allow the management of data records with at least one custom model (included in the code snippet below).
+```
+class DogPost(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='dog_posts')
+    image = CloudinaryField('image', default='placeholder')
+    caption = models.CharField(max_length=120, blank=True)
+    date_posted = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.user.username}'s post on {self.date_posted.strftime('%d-%m-%Y %H:%M:%S')}"
+```
 ___
 ### 1.3 
-- Add link to the project board **Ensure it's public**
-- Add image of the project board
+The project was managed with AGILE in mind utilising a projectboard and user stories. The public project baord can be found here: https://github.com/users/FollowRob/projects/10
+
+<img src="/maxwags/static/images/readme/project-board.webp" alt="drawing" style="width:700px;"/>
+
 ___
 ### 1.4
 - Link to PEP8 guidelines

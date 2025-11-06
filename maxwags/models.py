@@ -4,6 +4,7 @@ from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
+
 # User model
 class User(AbstractUser):
     is_walker = models.BooleanField(default=False)
@@ -11,6 +12,7 @@ class User(AbstractUser):
     def __str__(self):
         return self.username
     
+
 # DogPost model
 class DogPost(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='dog_posts')
@@ -20,6 +22,7 @@ class DogPost(models.Model):
 
     def __str__(self):
         return f"{self.user.username}'s post on {self.date_posted.strftime('%d-%m-%Y %H:%M:%S')}"
+    
     
 # Comment model
 class Comment(models.Model):
