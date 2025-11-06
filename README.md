@@ -83,7 +83,32 @@ ___
 ## LO2
 
 ### 2.1
-This can only be satisfied by looking at the code
+The MaxWags app uses a relational database powered by PostgreSQL (via Django ORM).  
+The schema includes three main models: `User`, `DogPost`, and `Comment`.
+
+##### ERD
+<img src="/maxwags/static/images/readme/ERD.webp" alt="drawing" style="width:300px;"/>
+
+##### Model Definitions
+```python
+class User(AbstractUser):
+    is_walker = models.BooleanField(default=False)
+
+class DogPost(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='posts')
+    image = models.ImageField(upload_to='dog_images/')
+    caption = models.CharField(max_length=120)
+    date_posted = models.DateTimeField(auto_now_add=True)
+
+class Comment(models.Model):
+    post = models.ForeignKey(DogPost, on_delete=models.CASCADE, related_name='comments')
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    text = models.TextField()
+    date_posted = models.DateTimeField(auto_now_add=True)
+```
+
+python manage.py makemigrations
+python manage.py migrate
 ___
 ### 2.2
 CRUD functionality fulfilled within the comments section, logged in users can:
