@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="text-center py-5">
+  <h1 class="display-3 fw-bold text-danger">500</h1>
+  <h2 class="mb-4">Internal Server Error</h2>
+  <p class="lead mb-4 text-muted">
+    Ruff! Something went wrong on our end. We’re fetching a fix.
+  </p>
+  <a href="{% url 'home' %}" class="btn btn-primary btn-lg">Back to Home</a>
+</div>
+{% endblock %}

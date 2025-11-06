@@ -134,3 +134,11 @@ def create_dog_post_view(request):
     else:
         form = DogPostForm()
     return render(request, 'create_post.html', {'form': form})
+
+
+def error_404(request, exception):
+    return render(request, '404.html', status=404)
+
+
+def error_500(request):
+    return render(request, '500.html', status=500)
