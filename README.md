@@ -187,13 +187,28 @@ ___
 
 ### 3.1
 ##### Role-Based Login and Registration
-- mention that there are 3 roles, user, staff and superadmin
-- add image of the login pages and the django admin login page
+There are 3 roles on the Maxwags web application - a login for each role should have been supplied already
+
+| Role | Description |
+|------------|--------------|
+| User | Able to login and create, edit and delete comments on posts |
+| Walker | Same access as user but also able to upload posts |
+| Superuser | Complete access to everything within the admin panel - delete any comment, post, user etc. |
+
+| Role | Image |
+|------------|--------------|
+| User/Walker | <img src="/maxwags/static/images/readme/user-admin.webp" style="width:325px;height:300px"> |
+| Superuser | <img src="/maxwags/static/images/readme/superuser-admin.webp" style="width:375px;height:290px"> |
 ___
 ### 3.2
 ##### Reflect Login State
-- add image of the top right in the navbar of the username logged in
-- add image of the top right nav bar with the login option
+
+| Status | Description | Evidence |
+|------------|--------------|-----------|
+| Logged in | Navbar when logged in | <img src="/maxwags/static/images/readme/navbar-loggedin.webp"> |
+| Logged in | Comment function when logged in | <img src="/maxwags/static/images/readme/create-crud.webp"> |
+| Logged out | Navbar when logged out | <img src="/maxwags/static/images/readme/navbar-loggedout.webp"> |
+| Logged out | Comment message when logged out | <img src="/maxwags/static/images/readme/login-comment.webp"> |
 ___
 ### 3.3
 ##### Access Control
