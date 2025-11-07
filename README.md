@@ -339,18 +339,18 @@ As a note on linting, only files edited personally were linted, standard files c
 ###### HTML Validation
 | Page | Pass/Fail | Notes | Image |
 | --- | --- | --- | --- |
-| 404 |  |  | <img src="/maxwags/static/images/readme" style="width:500px"> |
-| 500 |  |  | <img src="/maxwags/static/images/readme" style="width:500px"> |
-| Home |  |  | <img src="/maxwags/static/images/readme" style="width:500px"> |
-| Posts |  |  | <img src="/maxwags/static/images/readme" style="width:500px"> |
-| Register |  |  | <img src="/maxwags/static/images/readme" style="width:500px"> |
-| Login |  |  | <img src="/maxwags/static/images/readme" style="width:500px"> |
-| Edit Comment |  |  | <img src="/maxwags/static/images/readme" style="width:500px"> |
-| Delete Comment |  |  | <img src="/maxwags/static/images/readme" style="width:500px"> |
+| 404.html | Pass | 3 errors as validator doesn't like django template language | <img src="/maxwags/static/images/readme/html-valid-404.png" style="width:600px"> |
+| 500.html | Pass | 3 errors as validator doesn't like django template language | <img src="/maxwags/static/images/readme/html-valid-500.png" style="width:600px"> |
+| Home| Pass |  | <img src="/maxwags/static/images/readme/html-valid-home.png" style="width:600px"> |
+| Posts | Pass |  | <img src="/maxwags/static/images/readme/html-valid-post.png" style="width:600px"> |
+ Upload | Pass | 3 errors as validator doesn't like django template language | <img src="/maxwags/static/images/readme/html-valid-upload.png" style="width:600px"> |
+| base.html | Pass | 3 errors as validator doesn't like django template language | <img src="/maxwags/static/images/readme/html-valid-base.png" style="width:600px"> |
+| Register | Pass | Three Aria errors added because of the implementation of the Django Registration template | <img src="/maxwags/static/images/readme/html-valid-reg.png" style="width:600px"> |
+| Login | Pass |  | <img src="/maxwags/static/images/readme/html-valid-login.png" style="width:600px"> |
+| Edit Comment | Pass | 3 errors as validator doesn't like django template language | <img src="/maxwags/static/images/readme/html-valid-edit.png" style="width:600px"> |
+| Delete Comment | Pass | 3 errors as validator doesn't like django template language | <img src="/maxwags/static/images/readme/html-valid-delete.png" style="width:600px"> |
+| Logout | Pass | 2 errors as validator doesn't like django template language | <img src="/maxwags/static/images/readme/html-valid-logout.png" style="width:600px"> |
 
-- Add table 2 - Responsibility testing size - screenshot pass/fail
-- Add table 3 - browser testing - chome, brave, safari
-- Add images for all of these
 
 [Back to links](#criterion)
 ___
