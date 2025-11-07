@@ -373,9 +373,13 @@ ___
 
 ### 6.1
 ##### Deploy Application to Cloud Platform
-- Add link toHeroku deployed project
-- Add images where applicable
+Satisfied with the deployment via Heroku:
+https://capstone-maxwags-e4277e29559a.herokuapp.com/
+
+<img src="/maxwags/static/images/readme/Heroku-deployment.png" style="width:600px">
+
 ___
+
 ### 6.2
 ##### Document Deployment Process
 The site was deployed on Heroku and connected to GitHub for version control. This was done by following the below steps:
@@ -393,7 +397,7 @@ The site was deployed on Heroku and connected to GitHub for version control. Thi
 ___
 ### 6.3
 ##### Ensure Security in Deployment
-Satisfied by in settings
+Satisfied by in settings.py & .gitignore - if you're reading this, let's hope I remembered to set Debug to False.
 
 [Back to links](#criterion)
 ___
