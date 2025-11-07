@@ -52,6 +52,21 @@ The project was managed with AGILE in mind utilising a projectboard and user sto
 
 <img src="/maxwags/static/images/readme/project-board.webp" alt="drawing" style="width:700px;"/>
 
+##### User stories
+| User Story |
+| --- | 
+| As a Guest, I want to view a welcoming home page so that I can learn what MaxWags is about and navigate the site easily.
+| As a Guest, I want to browse dog posts so that I can see photos of dogs and their captions without signing up.
+| As a Guest, I want to create an account so that I can log in and interact with the community. | 
+| As a Registered User, I want to securely log in and log out so that I can access member features. | 
+| As a Walker, I want to upload a photo and caption of dogs I’ve walked so that owners can see their pets having fun.
+| As a Registered User, I want to comment on posts so that I can engage with other users. |
+| As a Registered User, I want to edit or delete my own comments so that I can correct mistakes or remove unwanted messages. 
+| As an Admin, I want to assign or remove walker status so that I can control which users can upload dog posts. 
+| As a User, I want the website to be easy to navigate and readable on all devices so that I can use it anywhere. 
+| As a User, I want clear visual feedback when I take an action so that I know if it succeeded or failed. 
+| As a Developer, I want the MaxWags app deployed on Heroku with Cloudinary storage so that it’s accessible online. 
+
 ___
 ### 1.4
 ##### Code Quality
