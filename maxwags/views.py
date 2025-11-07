@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from .models import DogPost, Comment
 from .forms import DogPostForm, RegisterForm
 
+
 # Create your views here.
 def home_page_view(request):
     return render(request, 'home.html')
