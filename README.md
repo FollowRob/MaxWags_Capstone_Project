@@ -12,9 +12,25 @@ ___
 - [LO8](#lo8) Leverage AI tools to orchestrate the software development process
 ___
 
-**Insert blurb about the website**
+### Summary
 
-![MAxWags device responsiveness screenshot](/maxwags/static/images/readme/devices-mockup.webp)
+MaxWags is a full-stack application built with Django that serves as a local dog walking business homepage and a community platform.
+
+I imagined it to be commissioned by someone called Max, a lifelong dog lover, who owns a business that serves the local community, collecting dogs in the morning from their customers and taking them to a private countryside field for several hours to play and socialise while their owners are at work, before returning them safely home.
+
+Inspiration came from a local business who used to take care of my dog whilst I was working and the realisation that community spaces are decreasing globally, so the secondary purpose is to be an online space to meet other like-minded customers who all have something in common. I believe this would also help foster a sense of customer loyalty to both the community and the business. 
+
+The initial design used the facebook colour scheme as I believed it would be easier to navigate for the companies older clients whilst also being familiar and friendly for their younger customers, however this had to change due to contrast issues for colourblind users. 
+
+
+<div align="center">
+<img src="/maxwags/static/images/readme/Laiker.jpeg" alt="wireframe" style="width:350px;"/>
+</div>
+In truth the idea behind this project was an excuse to somehow dedicate my final project to my labrador Laiker, who passed away halfway through the course and would always be underfoot whilst I studied.
+
+___
+
+![MaxWags device responsiveness screenshot](/maxwags/static/images/readme/devices-mockup.webp)
 
 ## LO1
 #### Using Agile to plan/design a Full-Stack app with Django
@@ -28,6 +44,21 @@ Initially there were 4 contrast errors, due to using roughly similar colours to 
 <img src="/maxwags/static/images/readme/wireframe.webp" alt="wireframe" style="width:100; height:300px;"/>
 <img src="/maxwags/static/images/readme/Wave-home.webp" alt="wireframe" style="width:100; height:300px;"/>
 <img src="/maxwags/static/images/readme/Wave-posts.webp" alt="wireframe" style="width:100; height:300px;"/>
+
+
+##### Target Users
+- Guest: Curious pet owners or community members. Can browse the homepage and view public dog posts.
+- Registered User: Dog owners whose pets attend MaxWags sessions. Can comment on posts and engage with the community.
+- Walker (Staff): MaxWags staff responsible for dog care and content. Can upload new photos and captions from each session.
+- Admin (Site Owner): Business owner or developer. Manages all users, posts, and comments via the Django admin panel.
+
+##### Core Features
+- Homepage: Introduces MaxWags and its services with a clean, friendly design.
+- Dog Posts Feed: A gallery of dog photos uploaded by walkers, with captions and timestamps.
+- Comments: Owners can comment on posts to create a sense of community.
+- Authentication: Role-based registration and login for users and staff.
+- Media Hosting: Cloud-based image storage via Cloudinary for reliability and performance.
+- Responsive Design: Fully mobile-friendly, built with Bootstrap 5 for accessibility and ease of use.
 ___
 
 ### 1.2
