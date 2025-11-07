@@ -11,6 +11,9 @@ ___
 - [LO7](#lo7) Demonstrate object-based concepts by implementing a custom model
 - [LO8](#lo8) Leverage AI tools to orchestrate the software development process
 ___
+
+**Insert blurb about the website**
+
 ![MAxWags device responsiveness screenshot](/maxwags/static/images/readme/devices-mockup.webp)
 
 ## LO1
@@ -224,8 +227,51 @@ ___
 
 ### 4.1
 ##### Python Test Procedures
-- Add table 1 - User stories and outcomes
-- Add images for all of these
+
+Manual testing was chosen as there were a limited about of models making automated testing seem like overkill.
+
+| Page | User Action | Expected Result | Pass/Fail |
+| --- | --- | --- | --- |
+| Nav links | | | |
+| | Click on Logo | Redirection to Home page | Pass |
+| | Click on Posts link in navbar | Redirection to Posts page | Pass |
+| | Click on Upload link in navbar | Redirection to Upload page (if user is Walker)| Pass |
+| | Click on Logout link in navbar | Log out user | Pass |
+| | Click on Login link in navbar | Redirection to Login page | Pass |
+| | Click on Register link in navbar | Redirection to Register page | Pass |
+| Posts Page | | | |
+| | Click on Post button on post | Adds Entered comment onto specific post | Pass |
+| | Click on Edit button on comment | Navigates to edit comment page | Pass |
+| | Click on Delete button on comment | Navigates to delete comment page | Pass |
+| Edit page |  |  |  |
+| | Click on Save Changes | Saves the comment and navigates to Posts page | Pass |
+| | Click on Cancel | Does not save the comment and navigates to Posts page | Pass |
+| Delete page |  |  |  |
+| | Click on Yes, delete | Deletes the comment and navigates to Posts page | Pass |
+| | Click on Cancel | Does not delete the comment and navigates to Posts page | Pass |
+| Register | | | |
+| | Enter valid email address | Field will only accept email address format | Pass |
+| | Enter valid password (twice) | Field will only accept password format | Pass | 
+| | Click on Create Account button | Creates the account, logs in navigates to Posts page | Pass |
+| Log In | | | |
+| | Click Login button | Redirects user to Posts page and logs in (provded details are correct) | Pass |
+| Log Out | | | |
+| | Click Logout button | Logs out user, Redirects user to Home page | Pass |
+| Footer | | | |
+| | Click on the Facebook icon | Opens new broswer tab to Facebook homepage | Pass |
+| | Click on the Instagram icon | Opens new broswer tab to Instagram homepage | Pass |
+| | Click on the Twitter (X) icon |  Opens new broswer tab to Twitter homepage | Pass |
+| Upload | | | |
+| | Click Choose file button | Allows user to select an image from their PC | Pass |
+| | Click Upload button | Uploads posts and redirects to Posts page | Pass |
+| | Click Back to posts text button | Redirects to Posts page | Pass |
+
+| Broswer | Image | Pass/Fail |
+| --- | --- | --- |
+| Chrome | <img src="/maxwags/static/images/readme/chrome.png" alt="drawing" style="width:300px;"/> | Pass |
+| Brave | <img src="/maxwags/static/images/readme/brave.png" alt="drawing" style="width:300px;"/> | Pass |
+| Safari| <img src="/maxwags/static/images/readme/safari.png" alt="drawing" style="width:300px;"/> | Pass |
+
 ___
 ### 4.2
 ##### JavaScript Test Procedures (if applicable)
@@ -300,6 +346,7 @@ ___
 ___
 ### 8.4
 ##### Use AI tools to create automated unit tests
+Instructed to ignore as manual testing is satisfactory.
 ___
 ### 8.5
 ##### Reflect on AI's role in the development process and it's impact on workflow
