@@ -358,11 +358,14 @@ ___
 
 ### 5.1
 ##### Version Control with Git and GitHub
-Satisfied with GitHub repository
+Satisfied witin GitHub repository:
+https://github.com/FollowRob/MaxWags_Capstone_Project
 ___
 ### 5.2
 ##### Secure Code Management
-Satisfied with GitHub repository
+Satisfied within GitHub repository and Heroku deployment:
+https://github.com/FollowRob/MaxWags_Capstone_Project
+https://capstone-maxwags-e4277e29559a.herokuapp.com/
 
 [Back to links](#criterion)
 ___
