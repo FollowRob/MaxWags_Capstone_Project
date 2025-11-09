@@ -505,18 +505,28 @@ ___
 
 ### 8.1
 ##### Use AI tools to assist in code creation
+
+AI tools such as ChatGPT and Co-pilot were utilised to assist with the repetitive coding tasks and minutiae of the project such as producing boilerplate code for templates, generating relevant code comments and basic html components such as links for the base footer.
+Each code snippet produced by AI was manually reviewed and edited to ensure it aligned with the project achitecture.  
 ___
 ### 8.2
 ##### Use AI tools to assist in debugging code
+AI was certainly used for debugging and problem solving, for instance it helped confirm that it would be quicker and easier to create a new database after the original user model was edited rather than spend time fixing a database with only one entry.
+In this instance AI was used in a conversational manner, emmulating a senior colleague to bounce ideas off and get to the bottom of why errors were occuring rather than just providing code snippets to fix issues. 
 ___
 ### 8.3
 ##### Use AI tools to optimise code for performance and user experience
+As for user experince the colour pallete was chosen with the assistance of ChatGPT, I'd described the look and feel I wanted the web application to have also stipulating that it must adhere to WCAG accessibility standards and use a dark green colou. The feedback provided by ChatGPT contributed to a cleaner and improved colour scheme evolving the "Facebook blue" to a more inclusive green-ish palette. 
 ___
 ### 8.4
 ##### Use AI tools to create automated unit tests
-Instructed to ignore as manual testing is satisfactory.
+This section was not applicable for this project, as manual testing was deemed satisfactory for demonstrating CRUD functionality and general site performance.
 ___
 ### 8.5
 ##### Reflect on AI's role in the development process and it's impact on workflow
+OVerall the AI assistance utilised helped bridge the gaps in Python best practices like giving advice on PEP8 adhereance, it helped by clarifying unfamiliar or unecessarily verbose error messages and provided some design inspiration.
+Overall AI's role was similar to that of a senior colleague and/or mentor; someone to bounce ideas off and validate my reasoning rather than a shortcut for answers.
+While this project most certainly could have been completed without the use of AI, it would have taken far longer, I feel the utilisation of AI enhanced both my productivity and my understanding significantly. 
+
 [Back to links](#criterion)
 [Back to top](#maxwags_capstone_project)
