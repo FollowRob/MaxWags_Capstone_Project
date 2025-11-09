@@ -24,6 +24,7 @@ ___
 - [LO6](#lo6) Deploy the web app using a cloud based platform ensuring security
 - [LO7](#lo7) Demonstrate object-based concepts by implementing a custom model
 - [LO8](#lo8) Leverage AI tools to orchestrate the software development process
+- [Credits](#credits)
 
 ___
 
