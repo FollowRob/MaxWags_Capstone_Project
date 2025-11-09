@@ -41,6 +41,7 @@ ___
 Initially there were 4 contrast errors, due to using roughly similar colours to Facebook (blue under white text), this caused an issue for colourblind users so a new colour scheme of green under white text was chosen.
 
 <img src="/maxwags/static/images/readme/devices-mockup.webp" alt="responsiveness" style="width:100; height:300px"/>
+<img src="/maxwags/static/images/readme/colour-table.png" alt="wireframe" style="width:100; height:300px;"/>
 <img src="/maxwags/static/images/readme/wireframe.webp" alt="wireframe" style="width:100; height:300px;"/>
 <img src="/maxwags/static/images/readme/Wave-home.webp" alt="wireframe" style="width:100; height:300px;"/>
 <img src="/maxwags/static/images/readme/Wave-posts.webp" alt="wireframe" style="width:100; height:300px;"/>
@@ -59,6 +60,20 @@ Initially there were 4 contrast errors, due to using roughly similar colours to 
 - Authentication: Role-based registration and login for users and staff.
 - Media Hosting: Cloud-based image storage via Cloudinary for reliability and performance.
 - Responsive Design: Fully mobile-friendly, built with Bootstrap 5 for accessibility and ease of use.
+
+##### Responsivity (lighthouse testing)
+| Page | Pass/Fail | Evidence |
+|------------|--------------|-----------|
+| Home  | Pass | <img src="/maxwags/static/images/readme/LH-home.png" style="width:450px;"> |
+| Home  | Pass | <img src="/maxwags/static/images/readme/LH-home.png" style="width:450px;"> |
+| Posts | Pass | <img src="/maxwags/static/images/readme/LH-posts.png" style="width:450px;"> |
+| Home  | Pass | <img src="/maxwags/static/images/readme/LH-home.png" style="width:450px;"> |
+| Register | Pass | <img src="/maxwags/static/images/readme/LH-reg.png" style="width:450px;"> |
+| Login | Pass | <img src="/maxwags/static/images/readme/LH-login.png" style="width:450px;">|
+| Upload | Pass | <img src="/maxwags/static/images/readme/LH-upload.png" style="width:450px;"> |
+| Edit | Pass | <img src="/maxwags/static/images/readme/LH-edit.png" style="width:450px;"> |
+| Delete | Pass | <img src="/maxwags/static/images/readme/LH-delete.png" style="width:450px;">|
+
 ___
 
 ### 1.2
