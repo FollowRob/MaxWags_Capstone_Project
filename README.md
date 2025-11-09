@@ -1,7 +1,21 @@
 # MaxWags Pet Walking Service by Rob Smith
 ___
+
+**Languages & Frameworks**  
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+
+**Database & Storage**  
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white)
+
+**Version Control & Deployment**  
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
+
+**AI Tools**  
+![ChatGPT](https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)![GitHub Copilot](https://img.shields.io/badge/GitHub_Copilot-000000?style=for-the-badge&logo=githubcopilot&logoColor=white)
+
+---
 ### To skip the criterion sections, please use the links below
-##### Criterion
+
 - [LO1](#lo1) Using Agile to plan/design a Full-Stack app with Django
 - [LO2](#lo2) Develop & implement a data model to query & manipulate data
 - [LO3](#lo3) Implement authorisation, authentication & permissions
@@ -10,9 +24,10 @@ ___
 - [LO6](#lo6) Deploy the web app using a cloud based platform ensuring security
 - [LO7](#lo7) Demonstrate object-based concepts by implementing a custom model
 - [LO8](#lo8) Leverage AI tools to orchestrate the software development process
+
 ___
 
-### Summary
+## Summary
 
 MaxWags is a full-stack application built with Django that serves as a local dog walking business homepage and a community platform.
 
@@ -26,7 +41,7 @@ The initial design used the facebook colour scheme as I believed it would be eas
 <div align="center">
 <img src="/maxwags/static/images/readme/Laiker.jpeg" alt="wireframe" style="width:350px;"/>
 </div>
-In truth the idea behind this project was an excuse to somehow dedicate my final project to my labrador Laiker, who passed away halfway through the course and would always be underfoot whilst I studied.
+In truth, the idea behind this project was an excuse to somehow dedicate my final project to my labrador Laiker, who passed away part way through the course and would always be underfoot whilst I studied.
 
 ___
 
@@ -223,7 +238,7 @@ def add_comment(request, post_id):
 
 | Operation | Description | Evidence |
 |------------|--------------|-----------|
-| Create | Users can submit a comment form under each post. | !<img src="/maxwags/static/images/readme/create-crud.webp"> |
+| Create | Users can submit a comment form under each post. | <img src="/maxwags/static/images/readme/create-crud.webp"> |
 | Read | Comments display below each post with username and date. | <img src="/maxwags/static/images/readme/read-crud.webp"> |
 | Update | Comment authors can edit their own text. | <img src="/maxwags/static/images/readme/update-crud.webp"> |
 | Delete | Comment authors can delete their own comments. | <img src="/maxwags/static/images/readme/delete-crud.webp">
@@ -262,7 +277,7 @@ ___
 
 ### 3.1
 ##### Role-Based Login and Registration
-There are 3 roles on the Maxwags web application - a login for each role should have been supplied already
+There are 3 roles on the Maxwags web application - a login for each role is included with submission.
 
 | Role | Description |
 |------------|--------------|
@@ -530,3 +545,35 @@ While this project most certainly could have been completed without the use of A
 
 [Back to links](#criterion)
 [Back to top](#maxwags_capstone_project)
+
+### Credits
+- **Post images:**  
+  -  [Walkies](https://www.facebook.com/dogwalkingcoventrycatvisitscoventry/?locale=en_GB) - source of images for the posts 
+
+- **Django guidance:**  
+  -  [freecodecamp.org](hhttps://www.youtube.com/watch?v=F5mRW0jo-U4&list=PLiHxuvQNTn1o5Dq7__QSGkh02Nt2zmvJO&index=7) - used to better understand Django setup best practices
+
+- **Google Fonts:**  
+  - [Bangers](https://fonts.google.com/specimen/Bangers) - used for headings and branding text.  
+  - [Delius](https://fonts.google.com/specimen/Delius) - used for body text for a friendly, approachable feel.  
+
+- **Favicon:**  
+  - Dog icon used for the favicon sourced from [Font Awesome](https://fontawesome.com/icons/shield-dog?f=classic&s=solid).  
+
+- **Icons:**  
+  - Social media icons (Facebook, Instagram, X/Twitter) provided by [Bootstrap Icons](https://icons.getbootstrap.com/).  
+
+- **Frameworks & Libraries:**  
+  - [Bootstrap 5.3](https://getbootstrap.com/) - for responsive layout and UI components.  
+  - [Font Awesome](https://fontawesome.com/) - for additional iconography.  
+
+- **Hosting & Storage:**  
+  - [Heroku](https://www.heroku.com/) - used for application hosting and deployment.  
+  - [Cloudinary](https://cloudinary.com/) - used for cloud-based image storage and media delivery.  
+
+- **Database:**  
+  - [PostgreSQL](https://www.postgresql.org/) - relational database used in production via Heroku.  
+
+- **AI Assistance:**  
+  - [ChatGPT](https://chat.openai.com/) - used for debugging, improving accessibility and UX decisions.  
+  - [GitHub Copilot](https://github.com/features/copilot) - assisted with repetitive coding and Django boilerplate generation.  
